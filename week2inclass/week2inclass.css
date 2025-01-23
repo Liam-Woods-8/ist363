@@ -1,0 +1,27 @@
+.circle{
+    width: 100px;
+    border-radius: 50px;
+    background-color: lightblue;
+    padding: 50px 0;
+    line-height: 0px;
+    text-align: center;
+    margin: 0 auto;
+    transition: 1s;
+  }
+  
+  .circle:hover{
+    background-color: blue;
+    transform:rotate(360deg);
+  }
+  
+  .otto{
+    position: absolute;
+    left: -50px;
+    animation-name: otto;
+    animation-duration: 5s;
+  }
+  
+  @keyframes otto{
+    from {transform: translateX(0)}
+    to {transform: translateX(2000px)}
+  }

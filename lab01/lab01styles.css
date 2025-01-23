@@ -3,18 +3,21 @@ body {
     background-color: #e38e49;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+
 }
 
 .container {
     background-color: #D4EBF8;
-    padding: 30px;
-    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+    width: 80px;
     max-width: 600px;
-    text-align: center;
-    border-radius: 15px;
+    box-sizing: border-box;
+    flex-grow: 1;
 }
 
 .container h1 {
