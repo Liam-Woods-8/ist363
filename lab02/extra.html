@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 2 Challenge</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background: linear-gradient(135deg, #2e1a47, #1e3c5b);
+        background-size: 400% 400%;
+        animation: gradient-animation 8s infinite;
+        overflow: hidden;
+      }
+
+      img {
+        max-width: 300px;
+        height: auto;
+        border: 4px ridge #fdb927;
+        border-radius: 15px;
+        animation: pulse-glow 2s infinite;
+      }
+
+      @keyframes pulse-glow {
+        0% {
+          box-shadow: 0 0 10px 2px rgba(255, 215, 0, 0.5);
+        }
+        50% {
+          box-shadow: 0 0 30px 10px rgba(255, 215, 0, 1);
+        }
+        100% {
+          box-shadow: 0 0 10px 2px rgba(255, 215, 0, 0.5);
+        }
+      }
+
+      @keyframes gradient-animation {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .floating-stars {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+      }
+
+      .star {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        animation: twinkle 4s infinite ease-in-out;
+      }
+
+      @keyframes twinkle {
+        0%,
+        100% {
+          opacity: 0.2;
+          transform: scale(0.8);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.2);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="floating-stars"></div>
+    <img src="lab02gif.gif" alt="Lebron James Dunking Gif" />
+
+    <script>
+      const starsContainer = document.querySelector(".floating-stars");
+      for (let i = 0; i < 100; i++) {
+        const star = document.createElement("div");
+        star.classList.add("star");
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 100}%`;
+        star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+        starsContainer.appendChild(star);
+      }
+    </script>
+  </body>
+</html>
