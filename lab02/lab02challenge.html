@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 2 Challenge</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background: linear-gradient(135deg, #2f0b51, #ad65f6, #b7b0f8);
+        background-size: 400% 400%;
+        animation: gradient-animation 8s infinite;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border: 4px ridge #552583;
+        border-radius: 15px;
+        animation: pulse-glow 2s infinite;
+      }
+
+      @keyframes pulse-glow {
+        0% {
+          box-shadow: 0 0 10px 2px rgba(255, 215, 0, 0.5);
+        }
+        50% {
+          box-shadow: 0 0 30px 10px rgba(255, 215, 0, 1);
+        }
+        100% {
+          box-shadow: 0 0 10px 2px rgba(255, 215, 0, 0.5);
+        }
+      }
+
+      @keyframes gradient-animation {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img src="lab02gif.gif" alt="Lebron James Dunking Gif" />
+  </body>
+</html>
