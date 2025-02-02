@@ -17,23 +17,27 @@ body {
 // Header
 header {
   background-color: $primary-color;
-  padding: $spacing-lg 0;
+  padding: $spacing-lg;
   text-align: center;
-  
+
   h1 {
     color: $white;
     font-size: $heading-size;
     margin-bottom: $spacing-md;
   }
-  
+
   nav {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-md;
+
     a {
       color: $white;
       text-decoration: none;
-      margin: 0 $spacing-md;
       padding: $spacing-sm;
       transition: opacity 0.3s ease;
-      
+      font-weight: bold;
+
       &:hover {
         opacity: 0.8;
       }
@@ -46,37 +50,37 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   padding: $spacing-lg;
-  position: relative;
-  
+  display: flex;
+  align-items: start;
+  gap: $spacing-lg;
+
   .section-title {
     color: $primary-color;
     font-size: $subheading-size;
-    position: absolute;
-    left: $spacing-lg;
-    top: $spacing-lg * 2;
+    font-weight: bold;
   }
-  
+
   .recipes-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: $spacing-md;
-    margin-left: 200px; // Space for the title
-    
+    flex-grow: 1;
+
     .recipe-card {
       background: $white;
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      
+      text-align: center;
+
       img {
         width: 100%;
         height: 200px;
         object-fit: cover;
       }
-      
+
       h3 {
         padding: $spacing-md;
-        text-align: center;
         color: $primary-color;
         background: $white;
       }
@@ -91,42 +95,43 @@ header {
   margin: $spacing-lg 0;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  
+  border-radius: 10px;
+
   img {
     width: 60px;
     margin-bottom: $spacing-md;
   }
-  
+
   p {
     margin-bottom: $spacing-lg;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    font-weight: bold;
   }
-  
+
   form {
     display: flex;
     justify-content: center;
     gap: $spacing-md;
     max-width: 500px;
     margin: 0 auto;
-    
+
     input {
       flex: 1;
       padding: $spacing-md;
-      border: 1px solid $primary-color;
-      border-radius: 4px;
+      border: 2px solid $primary-color;
+      border-radius: 20px;
     }
-    
+
     button {
       padding: $spacing-md $spacing-lg;
       background: $primary-color;
       color: $white;
       border: none;
-      border-radius: 4px;
+      border-radius: 20px;
       cursor: pointer;
       transition: opacity 0.3s ease;
-      
+
       &:hover {
         opacity: 0.9;
       }
@@ -137,34 +142,34 @@ header {
 // About Section
 .about {
   text-align: center;
-  padding: $spacing-lg 0;
-  
+  padding: $spacing-lg;
+
   img {
     width: 100%;
     max-height: 400px;
     object-fit: cover;
     margin-bottom: $spacing-lg;
   }
-  
+
   h2 {
     color: $primary-color;
     font-size: $subheading-size;
-    margin-bottom: $spacing-md;
+    font-weight: bold;
   }
-  
+
   p {
     margin-bottom: $spacing-lg;
   }
-  
+
   .learn-more {
     display: inline-block;
     padding: $spacing-md $spacing-lg;
     background: $primary-color;
     color: $white;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 20px;
     transition: opacity 0.3s ease;
-    
+
     &:hover {
       opacity: 0.9;
     }
@@ -174,23 +179,26 @@ header {
 // Footer
 footer {
   background-color: $footer-color;
-  padding: $spacing-lg 0;
+  padding: $spacing-lg;
   text-align: center;
-  
+
   .social-links {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-md;
     margin-bottom: $spacing-md;
-    
+
     a {
       color: $white;
       text-decoration: none;
-      margin: 0 $spacing-md;
-      
+      font-weight: bold;
+
       &:hover {
         text-decoration: underline;
       }
     }
   }
-  
+
   p {
     color: $white;
   }
@@ -198,18 +206,14 @@ footer {
 
 @media (max-width: $mobile) {
   .recipes-section {
+    flex-direction: column;
+    align-items: center;
+
     .recipes-grid {
       grid-template-columns: 1fr;
-      margin-left: 0;
-    }
-    
-    .section-title {
-      position: static;
-      text-align: center;
-      margin-bottom: $spacing-lg;
     }
   }
-  
+
   .newsletter form {
     flex-direction: column;
   }
