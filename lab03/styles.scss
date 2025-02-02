@@ -1,0 +1,185 @@
+@import 'partials/reset';
+@import 'partials/variables';
+@import 'partials/mixins';
+
+body {
+  font-family: $font-family;
+  line-height: 1.6;
+  color: $text-color;
+}
+
+// Header
+header {
+  background-color: $melon;
+  padding: $spacing-lg 0;
+  text-align: center;
+  
+  h1 {
+    color: $white;
+    font-size: $heading-size;
+    margin-bottom: $spacing-sm;
+  }
+  
+  nav {
+    a {
+      @include nav-link;
+      margin: 0 $spacing-sm;
+      
+      &:hover {
+        background-color: darken($melon, 10%);
+      }
+    }
+  }
+}
+
+// Recipe Sections
+.recipes-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-lg $spacing-md;
+  
+  h2 {
+    font-size: $subheading-size;
+    color: $text-color;
+    margin-bottom: $spacing-lg;
+    text-align: center;
+  }
+  
+  .recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: $spacing-lg;
+    
+    .recipe-card {
+      @include card;
+      background-color: $lime;
+      
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      
+      h3 {
+        padding: $spacing-md;
+        text-align: center;
+        color: $text-color;
+      }
+    }
+  }
+}
+
+// Newsletter Section
+.newsletter {
+  background-color: $mint;
+  padding: $spacing-lg 0;
+  text-align: center;
+  
+  .newsletter-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+    
+    img {
+      width: 60px;
+      margin-bottom: $spacing-md;
+    }
+    
+    p {
+      margin-bottom: $spacing-md;
+      color: $text-color;
+    }
+    
+    form {
+      @include flex-center;
+      gap: $spacing-md;
+      
+      input {
+        padding: $spacing-sm $spacing-md;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        width: 300px;
+        
+        @media (max-width: $mobile) {
+          width: 100%;
+        }
+      }
+      
+      button {
+        @include button;
+        background-color: $orange;
+        color: $white;
+      }
+    }
+  }
+}
+
+// About Section
+.about {
+  padding: $spacing-lg 0;
+  text-align: center;
+  
+  img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    margin-bottom: $spacing-lg;
+  }
+  
+  h2 {
+    font-size: $subheading-size;
+    color: $text-color;
+    margin-bottom: $spacing-md;
+  }
+  
+  p {
+    margin-bottom: $spacing-md;
+  }
+  
+  .learn-more {
+    @include button;
+    background-color: $orange;
+    color: $white;
+    display: inline-block;
+  }
+}
+
+// Footer
+footer {
+  background-color: $mint;
+  padding: $spacing-md 0;
+  text-align: center;
+  
+  .social-links {
+    margin-bottom: $spacing-sm;
+    
+    a {
+      color: $text-color;
+      margin: 0 $spacing-sm;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: $melon;
+      }
+    }
+  }
+  
+  p {
+    color: $text-color;
+  }
+}
+
+// Mobile Responsiveness
+@media (max-width: $mobile) {
+  .recipes-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .newsletter form {
+    flex-direction: column;
+    
+    input, button {
+      width: 100%;
+    }
+  }
+}

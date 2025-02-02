@@ -1,0 +1,40 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @mixin card {
+    background: $white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  
+  @mixin nav-link {
+    color: $white;
+    padding: $spacing-sm $spacing-md;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+    
+    &:hover {
+      background-color: rgba($white, 0.2);
+    }
+  }
+  
+  @mixin button {
+    padding: $spacing-sm $spacing-md;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    
+    &:hover {
+      opacity: 0.9;
+    }
+  }

@@ -1,0 +1,32 @@
+@import "reset";
+
+$heading_color: #8FBC8F;
+$main_font: Arial, Helvetica, sans-serif;
+$heading: orange;
+
+h1 {
+    color: $heading_color;
+}
+
+@mixin warning {
+    color: #483d8b;
+    background-color: #2F4F4F;
+}
+
+.danger {
+    @include warning;
+    font-family:"Courier New", Courier, monospace;
+}
+
+
+/* extend */
+.jumbotron {
+    width: 100%;
+    background-color: #696969;
+    border: 2px solid #F0FFF0;
+}
+
+.jumbotron_about {
+    @extend .jumbotron;
+    color: #E6E6FA;
+}
