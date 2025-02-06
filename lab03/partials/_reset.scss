@@ -1,19 +1,38 @@
-/* Reset Styles */
+// _reset.scss
+
+%reset-box {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+%reset-body {
+  line-height: 1;
+}
+
+%reset-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+%reset-list {
+  list-style: none;
+}
+
+// Apply placeholders
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    line-height: 1;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  ol, ul {
-    list-style: none;
-  }
+  @extend %reset-box;
+}
+
+body {
+  @extend %reset-body;
+}
+
+a {
+  @extend %reset-link;
+}
+
+ol, ul {
+  @extend %reset-list;
+}
