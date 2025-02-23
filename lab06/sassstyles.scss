@@ -1,0 +1,12 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/bootstrap";
+
+$primary: #00004a;
+$secondary: #e4eefe;
+$heading-colors: #00008b;
+
+$navbar-bg: $primary;
+$footer-bg: $primary;
+
+@import "node_modules/bootstrap/scss/bootstrap";
