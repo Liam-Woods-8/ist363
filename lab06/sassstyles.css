@@ -1,0 +1,34 @@
+/*# sourceMappingURL=sassstyles.css.map */
+:root {
+    --navy-blue: #00004a; 
+    --light-blue: #e4eefe; 
+    --dark-blue: #00008b; 
+  }
+  
+  .navbar,
+  .footer {
+    background-color: var(--navy-blue) !important;
+  }
+  
+  .bg-light-blue {
+    background-color: var(--light-blue);
+  }
+  
+  .text-dark-blue {
+    color: var(--dark-blue);
+  }
+  
+  .stars {
+    color: gold; 
+  }
+  
+  h1, h2 {
+    color: var(--dark-blue);
+  }
+
+  .reviews-container {
+    width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 15px; 
+  }
+  

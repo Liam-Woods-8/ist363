@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 07 | Javascript I</title>
+  </head>
+  <body>
+    <script>
+      // #1: Logging Multiple Variables
+      const favNumber = 8;
+      console.log("My favorite number is" + favNumber + ".");
+
+      // #2: Arrays
+      let favoriteFoods = ["pizza", "sushi", "tacos", "pasta"];
+      console.log("Second item in the array: " + favoriteFoods[1]);
+      favoriteFoods.push("rice");
+      console.log("Updated array: " + favoriteFoods);
+
+      // #3: Looping Arrays
+      for (let i = 0; i < favoriteFoods.length; i++) {
+        console.log("Favorite Food " + (i + 1) + ": " + favoriteFoods[i]);
+      }
+
+      // #4: Filtering Arrays
+      for (let i = 0; i < favoriteFoods.length; i++) {
+        if (i !== 1) {
+          console.log("Favorite Food " + (i + 1) + ": " + favoriteFoods[i]);
+        }
+      }
+
+      // #5: Objects
+      const book = {
+        title: "The Great Gatsby",
+        author: "F. Scott Fitzgerald",
+        yearPublished: 1925,
+        isAvailable: true,
+      };
+      console.log("Book Title: " + book.title);
+      console.log("Book Author: " + book.author);
+      if (book.isAvailable) {
+        console.log("This book is available for checkout.");
+      } else {
+        console.log("Sorry, this book is currently checked out.");
+      }
+
+      // #6: Other Kinds of Loops
+      let x = 0;
+      while (x <= 20) {
+        if (x % 2 == 0) {
+          console.log(x);
+        }
+        x++;
+      }
+
+      // #7: Random Numbers
+      const randomDieRoll = Math.floor(Math.random() * 6) + 1;
+      console.log("You rolled a: " + randomDieRoll);
+    </script>
+  </body>
+</html>
