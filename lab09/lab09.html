@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+</head>
+<body>
+    <h1>Product Information</h1>
+    <script>
+        const parsedData = {
+      "product": "Laptop",
+      "price": 1299.99,
+      "in_stock": true,
+      "specs": {
+        "brand": "TechBrand",
+        "memory": "16GB",
+        "storage": "512GB SSD"
+      },
+      "features": ["Touchscreen", "Backlit Keyboard", "Fingerprint Scanner"]
+    };
+
+    // Output the product name
+    console.log(parsedData.product);
+
+    // Output the tech brand
+    console.log(parsedData.specs.brand);
+
+    // Output the Touchscreen feature
+    console.log(parsedData.features[0]);
+    </script>
+    
+</body>
+</html>
